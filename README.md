@@ -41,20 +41,16 @@
 
 ---
 
-## 🧠 The problem
+## 🧠 How it works
 
-We remember the people we love **badly**. We forget what they told us, their tastes drift,
-and when the moment comes we reach for the same generic gift. Most “AI assistants” have the
-same disease: **amnesia between sessions**. They never build a real, evolving picture of a person.
+We remember the people we love **badly** — tastes drift, and we reach for the same generic gift.
+Most assistants share the disease: **amnesia between sessions**. Sidekick doesn't:
 
-## ✨ What Sidekick does
-
-1. **You teach it, casually.** *“Maya’s been into pottery lately, quit running after her race.”*
-2. **It writes — it never overwrites.** The old memory stays, dated; the new one is added.
-   Sidekick now *knows her taste changed*.
-3. **An occasion comes up.** Tap a birthday → Sidekick recalls the **specific, dated** memories…
-4. **…and hands you the gesture.** A concrete gift + a drafted message — each citing the
-   exact memories it drew on, with a **“What changed”** band showing the shift it caught.
+1. **Teach it, casually** — *“Maya’s been into pottery lately, quit running after her race.”*
+2. **It writes, never overwrites** — the old memory stays *dated*; Sidekick now knows her taste *changed*.
+3. **An occasion hits** — tap Maya’s birthday → it recalls the **specific, dated** memories.
+4. **It hands you the gesture** — a pottery class (not running gear) + a drafted card nodding to her
+   half-marathon, each citing the exact memories, with a **“What changed”** band on the shift it caught.
 
 > The difference between a generic gift and one that says *“I was paying attention.”*
 
@@ -114,7 +110,7 @@ npm run dev          # ▶ http://localhost:3000  — seeded demo, no keys neede
 ```
 
 <details>
-<summary><b>Go live (real HydraDB + Nebius)</b></summary>
+<summary><b>Go live (real HydraDB + Nebius) · scripts · project structure</b></summary>
 
 ```bash
 cp .env.example .env.local      # paste your two keys
@@ -126,49 +122,20 @@ npm run dev                     # /api/gesture now auto-flips to live; seeded st
 > HydraDB ingest is **async** — `seed:hydra` polls until `completed`. Free “Ship” tier, no card:
 > [dashboard.hydradb.com](https://dashboard.hydradb.com/sign-up).
 
+**Project structure**
+
+```
+app/api/memory/route.ts    # write a new dated memory  → HydraDB
+app/api/gesture/route.ts   # recall + synthesize       → HydraDB + Nebius
+app/page.tsx               # the single screen
+components/GestureCard.tsx # 🎁 the money-shot: gift + message + "what changed"
+components/...             # PersonCard · MemoryTimeline · TellMeInput
+lib/hydra.ts · nebius.ts   # clients with graceful seeded fallback
+lib/gesture.ts             # recall → synthesize pipeline
+scripts/                   # seed + smoke tests
+```
+
 </details>
-
-### Scripts
-
-| Command | What it does |
-|---|---|
-| `npm run dev` | Start the app (seeded demo by default) |
-| `npm run build` | Production build |
-| `npm run seed:hydra` | Ingest the 3 seeded people into HydraDB |
-| `npm run smoke:hydra` | Verify recall ranks the *latest* taste first |
-| `npm run smoke:nebius` | Verify Nebius inference is reachable |
-
----
-
-## 🗂️ Project structure
-
-```
-app/
-  api/memory/route.ts     # write a new dated memory  → HydraDB
-  api/gesture/route.ts    # recall + synthesize       → HydraDB + Nebius
-  page.tsx                # the single screen
-components/
-  PersonCard.tsx          # the 3-up people grid
-  MemoryTimeline.tsx      # dated chips; retired tastes dimmed
-  TellMeInput.tsx         # "teach it one thing" (optimistic write)
-  GestureCard.tsx         # 🎁 the money-shot: gift + message + "what changed"
-lib/
-  hydra.ts                # HydraDB client (graceful seeded fallback)
-  nebius.ts               # Nebius client (graceful seeded fallback)
-  gesture.ts              # recall → synthesize pipeline
-  seed.ts                 # the 3 seeded people
-scripts/                  # seed + smoke tests
-```
-
----
-
-## 🎬 Demo (15 seconds)
-
-1. **3 people** — Maya (sister), Dad, Priya — each with a next-occasion pill.
-2. Teach it: *“Maya’s been into pottery lately, quit running after her race”* → a new **dated** chip animates in.
-3. Tap **“Birthday next week”** → *Recalling Maya…*
-4. 💥 **GestureCard**: pottery course + a card nodding to her half-marathon + cited dated chips +
-   the teal **“What changed: running → pottery”** band.
 
 ---
 
