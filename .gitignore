@@ -31,4 +31,5 @@ yarn-error.log*
 CLAUDE.md
 docs/HACK.md
 docs/HACKATHON-BRIEF.md
+docs/BUILD-NOTES.md
 .claude/

@@ -28,9 +28,9 @@
 
 > ### 💥 The money-shot
 > Type **“my sister’s birthday is next week.”**
-> Sidekick proposes a **6-week pottery class** — *not* running gear — because it caught that
-> she **quit running and got into pottery weeks ago**, and drafts a card nodding to the
-> half-marathon she just ran.
+> Sidekick proposes the **ceremonial matcha she’s been raving about** — *not* the espresso
+> grinder you almost bought — because it caught that she **quit coffee and switched to matcha
+> weeks ago**, and drafts a card that nods to her old triple-shot self.
 >
 > **One screen. ~15 seconds. The magic is memory of a *change over time*.**
 
@@ -46,11 +46,11 @@
 We remember the people we love **badly** — tastes drift, and we reach for the same generic gift.
 Most assistants share the disease: **amnesia between sessions**. Sidekick doesn't:
 
-1. **Teach it, casually** — *“Maya’s been into pottery lately, quit running after her race.”*
+1. **Teach it, casually** — *“Maya’s obsessed with matcha now, totally off coffee since her caffeine scare.”*
 2. **It writes, never overwrites** — the old memory stays *dated*; Sidekick now knows her taste *changed*.
 3. **An occasion hits** — tap Maya’s birthday → it recalls the **specific, dated** memories.
-4. **It hands you the gesture** — a pottery class (not running gear) + a drafted card nodding to her
-   half-marathon, each citing the exact memories, with a **“What changed”** band on the shift it caught.
+4. **It hands you the gesture** — the matcha she raves about (not the espresso grinder) + a drafted card,
+   each citing the exact memories, with a **“What changed”** band on the shift it caught.
 
 > The difference between a generic gift and one that says *“I was paying attention.”*
 
@@ -64,7 +64,7 @@ Most assistants share the disease: **amnesia between sessions**. Sidekick doesn'
 | 🎯 **Best Agent People Love** | The gesture is emotional, human, and specific. It feels like a thoughtful friend. |
 | 🎯 **Most Creative Build** | “Memory of a change over time” as the headline feature, not a chatbot wrapper. |
 
-**The wow isn’t recall — it’s recall of a *change*.** Running → pottery. Old idea retired,
+**The wow isn’t recall — it’s recall of a *change*.** Coffee → matcha. Old idea retired,
 new one surfaced, with dates. That’s only possible with a real memory layer.
 
 ---
@@ -95,7 +95,7 @@ new one surfaced, with dates. That’s only possible with a real memory layer.
 
 > **The temporal trick:** HydraDB has no native “supersede” field, so Sidekick encodes the
 > timeline in **dated memory text + `recencyBias`**. The dimmed “retired” chips and the
-> **What changed** band are computed from those dates — recall ranks *pottery* above *running*.
+> **What changed** band are computed from those dates — recall ranks *matcha* above *coffee*.
 
 ---
 
@@ -114,7 +114,7 @@ npm run dev          # ▶ http://localhost:3000  — seeded demo, no keys neede
 
 ```bash
 cp .env.example .env.local      # paste your two keys
-npm run smoke:hydra             # ✅ recall ranks pottery above running
+npm run smoke:hydra             # ✅ recall ranks matcha above coffee
 npm run smoke:nebius            # ✅ inference reachable
 npm run seed:hydra              # ✅ ingest the 3 people so live recall has real data
 npm run dev                     # /api/gesture now auto-flips to live; seeded stays as fallback

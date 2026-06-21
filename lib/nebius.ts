@@ -81,7 +81,7 @@ export async function draftGesture(
         content:
           `You are Sidekick. Given DATED memories about one person, propose ONE concrete, thoughtful ${occasion} gift or gesture. ` +
           `Name the specific item/action, tie it to recent memories, and never suggest anything they dislike. ` +
-          `If their taste or situation CHANGED over time, capture the shift in "whatChanged" with from/to as SHORT noun phrases (1-2 words each, e.g. "running" -> "pottery"). ` +
+          `If their taste or situation CHANGED over time, capture the shift in "whatChanged" with from/to as SHORT noun phrases (1-2 words each, e.g. "coffee" -> "matcha"). ` +
           `Respond with ONLY a JSON object of this shape: ` +
           `{"gift": string (<=160 chars), "message": string (warm card text <=220 chars), ` +
           `"citedMemoryIds": string[] (use the exact [id] tokens shown, e.g. "m_pot2"), ` +

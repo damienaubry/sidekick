@@ -1,8 +1,8 @@
 /**
  * HydraDB smoke test — proves temporal, per-person, evolved recall (the money-shot).
  * Run: npm run smoke:hydra   (needs HYDRA_DB_API_KEY + HYDRA_DB_TENANT_ID in env)
- * PASS: the status loop prints "completed", then RECALL shows the pottery (Jun) memory
- *       ranked above running (Apr).
+ * PASS: the status loop prints "completed", then RECALL shows the matcha (Jun) memory
+ *       ranked above coffee/espresso (Apr).
  */
 import "./_env";
 import { HydraDBClient } from "@hydradb/sdk";
@@ -26,16 +26,16 @@ async function main() {
     subTenantId: person,
     memories: JSON.stringify([
       {
-        text: "On 2026-04-19, Maya ran a half-marathon PR and wanted a GPS running watch for her birthday.",
+        text: "On 2026-04-12, Maya wanted to upgrade her espresso setup and had a Niche Zero coffee grinder in her cart for her birthday.",
         infer: true,
         user_name: "Maya",
-        metadata: JSON.stringify({ event_date: "2026-04-19", topic: "hobby" }),
+        metadata: JSON.stringify({ event_date: "2026-04-12", topic: "taste" }),
       },
       {
-        text: "On 2026-06-12, Maya goes to a pottery studio 3x/week, stopped talking about running, always runs out of clay; the studio sells gift cards.",
+        text: "On 2026-06-12, Maya switched from coffee to matcha, whisks Ippodo ceremonial matcha every morning, and always runs out of the good stuff.",
         infer: true,
         user_name: "Maya",
-        metadata: JSON.stringify({ event_date: "2026-06-12", topic: "hobby" }),
+        metadata: JSON.stringify({ event_date: "2026-06-12", topic: "taste" }),
       },
     ]),
   });
@@ -52,7 +52,7 @@ async function main() {
   const recall: any = await client.query({
     tenantId,
     subTenantId: person,
-    query: "What hobby is Maya into right now, and did it recently change? Suggest a gift.",
+    query: "What is Maya into right now, and did her taste recently change? Suggest a gift.",
     type: "memory",
     queryBy: "hybrid",
     mode: "thinking",
@@ -60,7 +60,7 @@ async function main() {
   } as any);
 
   console.log("\nRECALL chunks ->", JSON.stringify(recall?.data?.chunks ?? recall?.chunks, null, 2));
-  console.log("\nPASS if a chunk mentions POTTERY (2026-06-12) ranked above running (2026-04-19).");
+  console.log("\nPASS if a chunk mentions MATCHA (2026-06-12) ranked above coffee/espresso (2026-04-12).");
 }
 
 main().catch((e) => {

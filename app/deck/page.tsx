@@ -270,7 +270,7 @@ function DemoSlide({ accent }: { accent: string }) {
       {/* headline (fixed) */}
       <div className="flex shrink-0 items-center justify-between gap-4">
         <h2 className="text-xl font-semibold leading-tight lg:text-3xl">
-          Her birthday’s next week — <span style={{ color: accent }}>the perfect gift in ~15s.</span>
+          Her birthday’s next week — <span style={{ color: accent }}>the gift she actually wants, in ~15s.</span>
         </h2>
         <span className="shrink-0 rounded-full border border-border bg-[#070b14] px-3 py-1 font-mono text-[11px] text-muted">
           ≤ 2:00 · working product
@@ -306,9 +306,9 @@ function DemoSlide({ accent }: { accent: string }) {
       {/* caption (fixed) — the money-shot; the speaker carries the rest */}
       <p className="mt-3 shrink-0 text-[14px] text-muted lg:text-[16px]">
         Type <span className="text-ink">“my sister’s birthday is next week”</span> → Sidekick proposes
-        a <span className="font-semibold text-[#e8a87c]">pottery class</span>, not running gear →
-        because it caught she switched{" "}
-        <span className="font-semibold text-[#18c2c2]">running → pottery</span> weeks ago.
+        the <span className="font-semibold text-[#e8a87c]">matcha she raves about</span>, not the espresso
+        grinder → because it caught she switched{" "}
+        <span className="font-semibold text-[#18c2c2]">coffee → matcha</span> weeks ago.
       </p>
     </div>
   );

@@ -26,13 +26,13 @@ async function main() {
       {
         role: "user",
         content:
-          "Person: Maya. Memories:\n- Apr 19: wanted a GPS running watch\n- Jun 12: switched to pottery 3x/week, runs out of clay\n\nDraft the birthday gift:",
+          "Person: Maya. Memories:\n- Apr 12: wanted an espresso grinder upgrade\n- Jun 12: switched coffee → matcha, raves about Ippodo, always runs out\n\nDraft the birthday gift:",
       },
     ],
   });
 
   console.log("\nNEBIUS DRAFT ->\n", res.choices[0]?.message?.content);
-  console.log("\nPASS if you got a pottery-themed gift (not running gear).");
+  console.log("\nPASS if you got a matcha-themed gift (not coffee/espresso gear).");
 }
 
 main().catch((e) => {

@@ -4,9 +4,10 @@ import type { Person } from "./types";
  * Seed people + dated memory histories. These are pre-ingested into HydraDB via the
  * real ingest path (genuine rows, not mocks) AND used as the demo-safe fallback.
  *
- * Money-shot person = Maya: a naive recommender surfaces her 2026-04-19 running-watch
- * wish; Sidekick recalls the EVOLVED state (injury 05-14 -> pottery 06-12) and proposes
- * a pottery course instead. `status: "superseded"` dims the retired running memories.
+ * Money-shot person = Maya: a naive recommender surfaces her 2026-04-12 espresso-upgrade
+ * wish; Sidekick recalls the EVOLVED state (caffeine jitters 05-10 -> matcha 06-12) and
+ * proposes the ceremonial matcha she raves about. `status: "superseded"` dims the retired
+ * coffee memories.
  */
 export const PEOPLE: Person[] = [
   {
@@ -17,49 +18,49 @@ export const PEOPLE: Person[] = [
     nextOccasion: { kind: "birthday", date: "2026-06-28" },
     memories: [
       {
-        id: "m_run1",
-        date: "2026-03-08",
+        id: "m_coffee1",
+        date: "2026-03-05",
         type: "preference",
         status: "superseded",
-        fact: "Three weeks into a 16-week Chicago Marathon block, 40+ mi/wk, obsessed with her Garmin pace; new carbon-plate Saucony shoes. Said running was 'the only thing keeping her sane.'",
+        fact: "Deep in her specialty-coffee era — pulls espresso on her Breville every morning, subscribes to a single-origin roaster, calls coffee 'her whole personality.' Two double-shots before noon.",
       },
       {
-        id: "m_run2",
-        date: "2026-04-19",
+        id: "m_coffee2",
+        date: "2026-04-12",
         type: "wish",
         status: "superseded",
-        fact: "Ran a half-marathon PR of 1:42 — 'the best she's felt in a year.' Wanted a GPS running watch (eyeing the Coros Pace) for her birthday.",
+        fact: "Wanted to upgrade her espresso setup for her birthday — had a Niche Zero grinder sitting in her cart for weeks.",
       },
       {
-        id: "m_injury",
-        date: "2026-05-14",
+        id: "m_jitters",
+        date: "2026-05-10",
         type: "event",
-        fact: "Tore her meniscus; orthopedist said no running for at least six months. Devastated — 'didn't know who she was without a training plan.'",
+        fact: "Caffeine started wrecking her — racing heart, anxious afternoons, couldn't sleep. Doctor told her to cut way back. 'I don't know how to have a morning without a double shot.'",
       },
       {
-        id: "m_pot1",
-        date: "2026-05-31",
+        id: "m_matcha1",
+        date: "2026-05-26",
         type: "preference",
-        fact: "Signed up for a beginner pottery wheel class to fill the void. Throwing clay was 'weirdly meditative,' the only time her knee didn't hurt.",
+        fact: "Swapped coffee for matcha to keep the ritual without the crash — says it's 'calm energy, no 3pm spiral.' Started whisking a bowl every morning.",
       },
       {
-        id: "m_pot2",
+        id: "m_matcha2",
         date: "2026-06-12",
         type: "preference",
         status: "active",
-        fact: "Now at the pottery studio 3x/week, has stopped talking about running entirely, fixated on glazes, sent six lopsided bowls, always runs out of clay. The studio sells gift cards.",
+        fact: "Fully in her matcha era now — deep in matcha TikTok, won't shut up about the Ippodo ceremonial matcha she found ('the first one that isn't grassy'), but rations it because it's pricey and always runs out.",
       },
       {
-        id: "m_nofoam",
+        id: "m_nocoffee",
         date: "2026-06-16",
         type: "dislike",
-        fact: "Hates 'recovery' gifts (foam rollers, compression sleeves) — they remind her she can't run yet and make her feel like an invalid.",
+        fact: "Asked us to stop giving her coffee stuff — beans, espresso gear — 'it just sits there tempting me and then I feel awful.'",
       },
       {
-        id: "m_wool",
+        id: "m_clutter",
         date: "2026-02-02",
         type: "dislike",
-        fact: "Allergic to wool — breaks out in a rash. No wool blankets, sweaters, or scarves, ever.",
+        fact: "Strict minimalist — hates clutter and novelty mugs, regifts knickknacks immediately. Anything on the counter has to be beautiful.",
       },
     ],
   },

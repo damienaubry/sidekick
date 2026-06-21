@@ -3,22 +3,22 @@ import type { Gesture } from "./types";
 /**
  * Demo-safe seeded gestures — exactly what the live HydraDB+Nebius path produces, hardcoded
  * so the money-shot lands even with zero keys or if a key dies mid-demo. Maya is the star
- * (the running -> pottery `whatChanged` band); David and Priya keep the demo robust if a
+ * (the coffee -> matcha `whatChanged` band); David and Priya keep the demo robust if a
  * judge clicks them.
  */
 export const SEED_GESTURES: Record<string, Gesture> = {
   ent_maya: {
     personId: "ent_maya",
     occasion: "birthday",
-    gift: "A 6-week beginner pottery course at her neighborhood studio (the one that sells gift cards) + a fresh bag of stoneware clay.",
+    gift: "A ceremonial matcha starter kit — the Ippodo matcha she keeps rationing, plus a proper bamboo whisk, sifter, and bowl so her morning ritual is complete.",
     message:
-      "Happy 29th, Maya. From chasing PRs to chasing the perfect bowl — I can't wait to see what you make this year. (Save me the first lopsided one.)",
-    citedMemoryIds: ["m_pot2", "m_run2", "m_injury", "m_nofoam"],
+      "Happy 29th, Maya. You went from triple-shot espresso to whisking matcha at sunrise — calmer, and somehow more you. Here's the good Ippodo, so you can finally stop rationing it.",
+    citedMemoryIds: ["m_matcha2", "m_coffee2", "m_jitters", "m_nocoffee"],
     whatChanged: {
-      from: "running",
-      to: "pottery",
+      from: "coffee",
+      to: "matcha",
       changedAt: "2026-06-12",
-      retiredIdea: "a GPS running watch",
+      retiredIdea: "an espresso grinder",
     },
     noticed: null,
     imageUrl: null,
