@@ -1,8 +1,10 @@
 <div align="center">
 
-# 🎁 Sidekick
+<img src="docs/assets/banner.png" alt="Sidekick — remembers how the people you love change" width="100%" />
 
-### Tell it about the people you love. It remembers how they *change* — and hands you the perfect gesture.
+<br/><br/>
+
+### Tell it about the people you love. When an occasion comes up, it hands you the perfect gesture.
 
 *Birthdays sneak up. The gift is always generic. Sidekick is the friend who was paying attention.*
 
