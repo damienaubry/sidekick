@@ -36,8 +36,19 @@
 
 </div>
 
-<!-- TODO: drop the demo GIF here for the win — docs/assets/money-shot.gif -->
-<!-- <div align="center"><img src="docs/assets/money-shot.gif" width="720" alt="Sidekick money-shot"/></div> -->
+---
+
+## 🎥 Video demo
+
+<div align="center">
+
+[<img src="docs/assets/demo-poster.jpg" alt="▶ Watch the Sidekick demo on YouTube" width="760"/>](https://youtu.be/niukYEe1Q14)
+
+### ▶︎ [ Watch the 30-second demo on YouTube ](https://youtu.be/niukYEe1Q14)
+
+*coffee → matcha · one screen · ~30s · narrated*
+
+</div>
 
 ---
 
