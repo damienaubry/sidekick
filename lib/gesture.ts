@@ -29,7 +29,7 @@ export const SEED_GESTURES: Record<string, Gesture> = {
     occasion: "retirement party",
     gift: "An electric burr grinder — single-origin quality without the hand-crank his wrists now hate. No app, no subscription; it just works.",
     message:
-      "Here's to 31 years and the slow mornings you've earned, Dad. Your pour-over, minus the wince. See you Sunday for the race.",
+      "Here's to 31 years and the slow mornings you've earned, Dad. Your pour-over, minus the wince. See you Sunday.",
     citedMemoryIds: ["d_coffee", "d_hands", "d_noapp"],
     whatChanged: null,
     noticed:

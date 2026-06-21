@@ -126,12 +126,12 @@ npm run dev                     # /api/gesture now auto-flips to live; seeded st
 
 ```
 app/api/memory/route.ts    # write a new dated memory  → HydraDB
-app/api/gesture/route.ts   # recall + synthesize       → HydraDB + Nebius
+app/api/gesture/route.ts   # the live pipeline: recall → synthesize (seeded fallback)
 app/page.tsx               # the single screen
 components/GestureCard.tsx # 🎁 the money-shot: gift + message + "what changed"
 components/...             # PersonCard · MemoryTimeline · TellMeInput
-lib/hydra.ts · nebius.ts   # clients with graceful seeded fallback
-lib/gesture.ts             # recall → synthesize pipeline
+lib/hydra.ts · nebius.ts   # HydraDB + Nebius clients (server-only)
+lib/gesture.ts             # seeded demo gestures (fallback when keys absent)
 scripts/                   # seed + smoke tests
 ```
 

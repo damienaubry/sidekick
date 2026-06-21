@@ -2,11 +2,11 @@
   "name": "sidekick",
   "version": "0.1.0",
   "private": true,
+  "description": "Sidekick — a temporal-memory gift agent that remembers how the people you love change (HydraDB + Nebius).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "smoke:hydra": "tsx scripts/hydra-smoke.ts",
     "smoke:nebius": "tsx scripts/nebius-smoke.ts",
     "seed:hydra": "tsx scripts/seed-hydra.ts"
