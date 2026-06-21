@@ -1,0 +1,34 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files (keep real keys out of the repo)
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# local AI tooling & internal strategy — not part of the public submission
+CLAUDE.md
+docs/HACK.md
+docs/HACKATHON-BRIEF.md
+.claude/
