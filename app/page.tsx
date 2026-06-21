@@ -7,6 +7,7 @@ import { PersonCard } from "@/components/PersonCard";
 import { MemoryTimeline } from "@/components/MemoryTimeline";
 import { TellMeInput } from "@/components/TellMeInput";
 import { GestureCard, GestureSkeleton } from "@/components/GestureCard";
+import PoweredBy from "@/components/PoweredBy";
 import { capitalize, shortDate } from "@/lib/format";
 
 export default function Home() {
@@ -157,8 +158,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="relative z-10 mx-auto max-w-6xl px-6 pb-10 pt-2 text-center text-xs text-muted">
-        Memory by HydraDB · reasoning by Nebius
+      <footer className="relative z-10 mx-auto flex max-w-6xl items-center justify-center px-6 pb-10 pt-2">
+        <PoweredBy />
       </footer>
     </>
   );
